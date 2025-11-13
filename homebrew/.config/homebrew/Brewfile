@@ -1,0 +1,64 @@
+# ZSH
+brew "zsh-completions"            # Zsh completions for various commands
+
+# CLI Tools
+brew "bat"                        # Cat clone with syntax highlighting and Git integration
+brew "btop"                       # Interactive process viewer for the terminal
+brew "eza"                        # Modern replacement for 'ls' with more features and better defaults
+brew "fd"                         # Simple, fast alternative to 'find' with intuitive syntax
+brew "fzf"                        # Command-line fuzzy finder for interactive searching
+brew "jq"                         # Lightweight command-line JSON processor
+brew "ripgrep"                    # Recursively searches directories for regex patterns (faster grep)
+brew "stow"                       # Symlink farm manager for managing dotfiles
+brew "zoxide"                     # Smarter cd command that learns your habits
+
+# Package Managers
+brew "pnpm"                       # Fast, disk space efficient package manager for Node.js
+brew "luarocks"                   # Package manager for Lua modules
+
+# Runtime Managers
+brew "mise"                       # Polyglot runtime manager for managing dev tool versions
+
+# Version Control
+brew "git"                        # Distributed version control system
+brew "lazygit"                    # Simple terminal UI for git commands with interactive interface
+
+# Container Tools
+cask "orbstack"                   # Fast, lightweight Docker and Linux container runtime for macOS
+brew "container"                  # Apple Silicon-native container runtime for macOS
+brew "lazydocker"                 # Simple terminal UI for Docker and Docker Compose
+
+# VM Tools
+cask "utm"                        # Virtual machines UI using QEMU
+
+# Terminal Tools
+cask "ghostty"                    # Fast, native, feature-rich terminal emulator
+brew "neovim"                     # Hyperextensible Vim-based text editor with modern features
+brew "starship"                   # Minimal, blazing-fast, and customizable prompt for any shell
+
+# IDEs and Editors
+cask "visual-studio-code"         # Popular source-code editor with extensions and debugging
+cask "zed"                        # Fast and lightweight code editor with collaborative features
+
+# AI Tools
+cask "claude"                     # AI-powered desktop application for writing and brainstorming
+cask "claude-code"                # AI-powered CLI assistant for software development
+brew "gemini-cli"                 # Command-line interface for Gemini AI model
+brew "anomalyco/tap/opencode"     # Open-source AI coding agent built for the terminal
+
+# Browsers
+cask "brave-browser"              # Privacy-focused web browser with built-in ad blocker
+cask "firefox"                    # Popular open-source web browser focused on privacy and customization
+cask "firefox@developer-edition"  # Version of Firefox tailored for web developers
+cask "google-chrome"              # Fast, secure, and widely-used web browser
+cask "google-chrome@canary"       # Experimental version of Google Chrome for developers
+cask "microsoft-edge"             # Fast and secure web browser from Microsoft
+cask "microsoft-edge@dev"         # Developer version of Microsoft Edge with latest features
+cask "safari-technology-preview"  # Experimental version of Safari for testing new web technologies
+
+# Fonts
+cask "font-fira-code-nerd-font"   # Monospaced font with programming ligatures and icons
+
+# Everything else
+cask "raycast"                    # Productivity tool for macOS with quick access to apps and workflows
+cask "tailscale"                  # Zero-config VPN for secure remote access to devices

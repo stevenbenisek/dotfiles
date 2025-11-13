@@ -1,0 +1,36 @@
+{
+  "agent": {
+    "inline_assistant_model": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-6-latest",
+    },
+    "enable_feedback": false,
+  },
+  "agent_servers": {
+    "OpenCode": {
+      "command": "opencode",
+      "args": ["acp"],
+      "type": "custom",
+    },
+  },
+  "edit_predictions": {
+    "provider": "supermaven",
+  },
+  "icon_theme": "Material Icon Theme",
+  "tabs": {
+    "file_icons": true,
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "terminal": {
+    "font_size": 14.0,
+    "font_family": "FiraCode Nerd Font",
+  },
+  "theme": {
+    "dark": "Tokyo Night",
+    "light": "Tokyo Night Light",
+    "mode": "system",
+  },
+}

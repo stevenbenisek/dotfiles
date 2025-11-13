@@ -1,0 +1,17 @@
+bun.lock
+lazy-lock.json
+node_modules
+package.json
+*.local
+!bin/.local
+bin/.local/*
+!bin/.local/bin
+code/Library/Application Support/*
+!code/Library/Application Support/Code
+code/Library/Application Support/Code/*
+!code/Library/Application Support/Code/User
+code/Library/Application Support/Code/User/*
+!code/Library/Application Support/Code/User/settings.json
+ssh/.ssh/*
+!ssh/.ssh/config
+!ssh/.ssh/config.local.example
