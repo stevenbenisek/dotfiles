@@ -1,0 +1,253 @@
+#!/usr/bin/env node
+
+import assert from "node:assert";
+import path from "node:path";
+import { execFileSync } from "node:child_process";
+import { mkdtempSync } from "node:fs";
+import { parseArgs } from "node:util";
+import { tmpdir } from "node:os";
+
+const options = {
+  verbose: {
+    type: "boolean",
+    short: "v",
+    default: false,
+  },
+};
+
+const { values, positionals } = parseArgs({
+  options,
+  allowPositionals: true,
+});
+
+const [userId] = positionals;
+
+assert(
+  userId,
+  'Usage: gpgen "Full Name <email@example.com>" [--verbose]',
+);
+
+const { verbose } = values;
+
+function debug(message) {
+  if (verbose) {
+    process.stderr.write(`${message}\n`);
+  }
+}
+
+// Setup isolated working directory
+const homedir = mkdtempSync(path.join(tmpdir(), "gnupghome-"));
+debug(`Homedir created at: ${homedir}`);
+
+// Generate Certify key. gpg-agent's pinentry prompts for the passphrase
+// and caches it, so the subsequent subkey/export operations below don't
+// prompt again as long as they happen within the agent's cache TTL.
+debug("Generating certify [C] key...");
+genCertKey({ homedir, userId });
+
+const fingerprint = getFingerprint({ homedir, id: userId });
+
+debug("Generating sign [S] subkey...");
+genSignKey({ fingerprint, homedir });
+
+debug("Generating auth [A] subkey...");
+genAuthKey({ fingerprint, homedir });
+
+debug("Generating encrypt [E] subkey...");
+genEncryptKey({ fingerprint, homedir });
+
+debug("Exporting public key...");
+exportPublicKey({ fingerprint, homedir, outputdir: homedir });
+
+debug("Exporting secret keys ...");
+exportSecretKeys({ fingerprint, homedir, outputdir: homedir });
+
+debug("Exporting secret subkeys ...");
+exportSecretSubkeys({ fingerprint, homedir, outputdir: homedir });
+
+process.stdout.write(homedir);
+
+export function exportOwnertrust({ homedir, outputdir = homedir }) {
+  return execFileSync("gpg", [
+    "--homedir",
+    homedir,
+    "--output",
+    join(outputdir, "ownertrust.txt"),
+    "--export-ownertrust"
+  ], {
+    encoding: "utf8"
+  });
+}
+
+function exportPublicKey({ fingerprint, homedir, outputdir = homedir }) {
+  return execFileSync("gpg", [
+    "--homedir",
+    homedir,
+    "--output",
+    path.join(outputdir, "public-key.asc"),
+    "--export",
+    "--armor",
+    fingerprint
+  ], {
+    encoding: "utf8"
+  });
+}
+
+function exportRevokeCert({ fingerprint, homedir, outputdir = homedir }) {
+  return execFileSync("gpg", [
+    "--homedir",
+    homedir,
+    "--output",
+    path.join(outputdir, "revocation-cerificate.asc"),
+    "--gen-revoke",
+    fingerprint
+  ], {
+    encoding: "utf8"
+  });
+}
+
+function exportSecretKeys({ fingerprint, homedir, outputdir = homedir }) {
+  return execFileSync("gpg", [
+    "--homedir",
+    homedir,
+    "--batch",
+    "--output",
+    path.join(outputdir, "secret-keys.asc"),
+    "--export-secret-keys",
+    "--armor",
+    fingerprint
+  ], {
+    encoding: "utf8"
+  });
+}
+
+function exportSecretSubkeys({ fingerprint, homedir, outputdir = homedir }) {
+  return execFileSync("gpg", [
+    "--homedir",
+    homedir,
+    "--batch",
+    "--output",
+    path.join(outputdir, "secret-subkeys.asc"),
+    "--export-secret-subkeys",
+    "--armor",
+    fingerprint
+  ], {
+    encoding: "utf8"
+  });
+}
+
+function genAuthKey({ fingerprint, homedir }) {
+  return execFileSync("gpg", [
+    "--homedir",
+    homedir,
+    "--batch",
+    "--quick-add-key",
+    fingerprint,
+    "ed25519",
+    "auth",
+    "2y"
+  ], {
+    encoding: "utf8"
+  });
+}
+
+function genCertKey({ homedir, userId }) {
+  return execFileSync("gpg", [
+    "--homedir",
+    homedir,
+    "--batch",
+    "--quick-generate-key",
+    userId,
+    "ed25519",
+    "cert",
+    "never"
+  ], {
+    encoding: "utf8"
+  });
+}
+
+function genEncryptKey({ fingerprint, homedir }) {
+  return execFileSync("gpg", [
+    "--homedir",
+    homedir,
+    "--batch",
+    "--quick-add-key",
+    fingerprint,
+    "cv25519",
+    "encrypt",
+    "2y"
+  ], {
+    encoding: "utf8"
+  });
+}
+
+function genSignKey({ fingerprint, homedir }) {
+  return execFileSync("gpg", [
+    "--homedir",
+    homedir,
+    "--batch",
+    "--quick-add-key",
+    fingerprint,
+    "ed25519",
+    "sign",
+    "2y"
+  ], {
+    encoding: "utf8"
+  });
+}
+
+function getFingerprint({ homedir, id }) {
+  const listing = execFileSync("gpg", [
+    "--homedir",
+    homedir,
+    "-k",
+    "--with-colons",
+    id
+  ], {
+    encoding: "utf8"
+  });
+
+  const fpr = listing.split("\n").find((line) => line.startsWith("fpr:"));
+
+  if (!fpr) {
+    throw new Error("Invalid key format: missing fpr line");
+  }
+
+  return fpr.split(":")[9];
+}
+
+export function getHomedir() {
+  return execFileSync("gpgconf", [
+    "--list-dirs",
+    "homedir"
+  ], {
+    encoding: "utf8"
+  });
+}
+
+export function importKeys({ homedir, inputdir, passphraseFile }) {
+  return execFileSync("gpg", [
+    "--homedir",
+    homedir,
+    "--batch",
+    "--pinentry-mode=loopback",
+    "--passphrase-file",
+    passphraseFile,
+    "--import",
+    join(inputdir, "public-key.asc"),
+    join(inputdir, "secret-subkeys.asc")
+  ], {
+    encoding: "utf8"
+  });
+}
+
+export function importOnwertrust({ homedir, inputdir }) {
+  return execFileSync("gpg", [
+    "--homedir",
+    homedir,
+    "--import-ownertrust",
+    join(inputdir, "ownertrust.txt")
+  ], {
+    encoding: "utf8"
+  });
+}

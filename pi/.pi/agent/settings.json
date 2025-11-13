@@ -1,0 +1,10 @@
+{
+  "lastChangelogVersion": "0.84.1",
+  "defaultProvider": "anthropic",
+  "defaultModel": "claude-sonnet-5-5",
+  "defaultThinkingLevel": "medium",
+  "packages": [
+    "npm:pi-autoresearch"
+  ],
+  "theme": "dark"
+}

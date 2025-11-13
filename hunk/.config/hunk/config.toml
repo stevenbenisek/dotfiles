@@ -1,0 +1,13 @@
+theme = "custom"
+
+[custom_theme]
+base = "midnight"
+label = "Tokyo Night"
+accent = "#7aa2f7"
+panel = "#1a1b26"
+noteBorder = "#3b4261"
+
+[custom_theme.syntax]
+keyword = "#bb9af7"
+string = "#9ece6a"
+comment = "#565f89"

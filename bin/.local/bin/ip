@@ -1,0 +1,57 @@
+#!/usr/bin/env node
+
+import os from "node:os";
+import { parseArgs } from "node:util";
+
+const options = {
+  private: {
+    type: "boolean",
+    description: "Private IP Address",
+    default: true,
+  },
+  public: {
+    type: "boolean",
+    description: "Public IP Address",
+    default: true,
+  },
+};
+
+const config = {
+  allowNegative: true,
+  options,
+  strict: true,
+};
+
+const { values } = parseArgs(config);
+const { private: includePrivateIP, public: includePublicIP } = values;
+
+function getPrivateIP() {
+  const networkInterfaces = os.networkInterfaces();
+  const allNetworkInterfaces = Object.values(networkInterfaces).flat();
+  const externalIPv4Interfaces = allNetworkInterfaces.filter(
+    (iface) => iface.family === "IPv4" && !iface.internal,
+  );
+  const externalIPv4Addresses = externalIPv4Interfaces.map(
+    (iface) => iface.address,
+  );
+  return externalIPv4Addresses[0];
+}
+
+async function getPublicIP() {
+  const url = new URL("https://api.ipify.org");
+  const request = new Request(url);
+  const response = await fetch(request);
+  return response.text();
+}
+
+const ipAddresses = {};
+
+if (includePrivateIP) {
+  ipAddresses.private = getPrivateIP();
+}
+
+if (includePublicIP) {
+  ipAddresses.public = await getPublicIP();
+}
+
+console.table(ipAddresses);
