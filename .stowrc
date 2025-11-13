@@ -1,0 +1,3 @@
+--ignore=.DS_Store
+# Target directory for symlinks (where dotfiles will be linked to)
+--target=~

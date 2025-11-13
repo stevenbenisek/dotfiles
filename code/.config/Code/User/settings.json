@@ -1,0 +1,65 @@
+{
+  /* Text Editor */
+  "editor.accessibilitySupport": "off",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "FiraMonoNerdFont",
+  "editor.fontSize": 16,
+  "editor.formatOnType": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.minimap.enabled": false,
+  "editor.rulers": [80],
+  "editor.tabSize": 2,
+  "files.associations": {
+    "*.mdx": "markdown",
+    "*.sass": "scss"
+  },
+
+  /* Workbench */
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.startupEditor": "none",
+
+  /* Extensions: Emmet */
+  "emmet.triggerExpansionOnTab": true,
+
+  /* Extensions: ESLint */
+  "eslint.alwaysShowStatus": true,
+  "eslint.run": "onSave",
+
+  /* Extensions: Material Icons */
+  "material-icon-theme.activeIconPack": "react",
+  "material-icon-theme.showUpdateMessage": false,
+
+  /* Extensions: Prettier */
+  "prettier.arrowParens": "avoid",
+  "prettier.singleQuote": true,
+  "prettier.tabWidth": 2,
+  "prettier.trailingComma": "all",
+
+  /* Extensions: TypeScript */
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "typescript.format.enable": false,
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false,
+    "yaml": false
+  },
+  "workbench.sideBar.location": "right",
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "github.copilot.chat.languageContext.typescript.enabled": true,
+  "git.suggestSmartCommit": false,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.chat.agent.thinkingTool": true,
+  "github.copilot.chat.generateTests.codeLens": true,
+  "github.copilot.chat.languageContext.fix.typescript.enabled": true,
+  "github.copilot.chat.languageContext.inline.typescript.enabled": true,
+  "editor.formatOnSave": true,
+  "terminal.integrated.fontFamily": "FiraMonoNerdFont"
+}
