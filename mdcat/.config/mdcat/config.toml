@@ -1,0 +1,35 @@
+[theme]
+base = "dark"
+rule = "comment"
+
+[theme.palette]
+comment = "#565f89"
+red = "#f7768e"
+yellow = "#e0af68"
+green = "#9ece6a"
+teal = "#73daca"
+cyan = "#7dcfff"
+blue = "#7aa2f7"
+magenta = "#bb9af7"
+
+[theme.styles]
+html_block = { fg = "comment" }
+inline_html = { fg = "comment" }
+code = { fg = "teal" }
+link = { fg = "blue" }
+image_link = { fg = "cyan" }
+quote_border = { fg = "comment" }
+h1_text = { fg = "magenta", modifiers = ["bold"] }
+h2 = { fg = "blue", modifiers = ["bold"] }
+h3 = { fg = "cyan", modifiers = ["bold"] }
+h4 = { fg = "teal", modifiers = ["bold"] }
+h5 = { fg = "green", modifiers = ["bold"] }
+h6 = { fg = "yellow", modifiers = ["bold"] }
+footnote = { fg = "comment", modifiers = ["italic"] }
+math = { fg = "green" }
+mermaid = { fg = "cyan" }
+alert_note = { fg = "blue" }
+alert_tip = { fg = "teal" }
+alert_important = { fg = "magenta" }
+alert_warning = { fg = "yellow" }
+alert_caution = { fg = "red" }
