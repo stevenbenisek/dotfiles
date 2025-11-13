@@ -1,0 +1,37 @@
+onboarding = false
+
+[theme]
+auto_switch = false
+name = "tokyo-night"
+
+[theme.custom]
+panel_bg = "reset"
+accent = "#7aa2f7"
+
+[ui]
+agent_panel_sort = "spaces"
+pane_borders = "always"
+pane_gaps = true
+show_agent_labels_on_pane_borders = true
+sidebar_width = 30
+status_indicators = "symbols"
+
+[ui.sidebar.spaces]
+row_gap = 1
+rows = [
+  ["state_icon", { token = "workspace", bold = true }],
+  [{ token = "branch", fg = "#7dcfff" }, "git_status"],
+]
+
+[ui.sidebar.agents]
+row_gap = 1
+rows = [
+  ["state_icon", "machine", { token = "workspace", fg = "#7aa2f7", bold = true }, "tab"],
+  [{ token = "agent", dim = true }],
+]
+
+[ui.sound]
+enabled = false
+
+[ui.toast]
+delivery = "herdr"

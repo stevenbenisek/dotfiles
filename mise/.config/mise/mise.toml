@@ -1,0 +1,10 @@
+[tools]
+bun = "latest"
+go = "latest"
+java = ["17", "latest"]
+node = ["22", "24", "26", "latest"]
+pnpm = ["11", "latest"]
+python = "latest"
+ruby = ["3.2.0", "latest"]
+rust = "latest"
+uv = "latest"
