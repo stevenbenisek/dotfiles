@@ -1,0 +1,2 @@
+# Target directory for symlinks (where dotfiles will be linked to)
+--target=~

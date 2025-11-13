@@ -1,0 +1,88 @@
+# macOS system files
+\.DS_Store
+\.AppleDouble
+\.AppleDB
+\.AppleDesktop
+Network Trash Folder
+Temporary Items
+\.apdisk
+\.Spotlight-V100
+\.Trashes
+\.VolumeIcon\.icns
+\.fseventsd
+\.DocumentRevisions-V100
+\.TemporaryItems
+Icon\r
+
+# Windows system files (in case of cross-platform repos)
+Thumbs\.db
+Desktop\.ini
+\$RECYCLE\.BIN
+
+# Version control
+\.git
+\.gitignore
+\.gitmodules
+\.gitattributes
+\.svn
+\.hg
+\.hgignore
+
+# Editor temporary files
+~$
+\.swp
+\.swo
+\.swn
+\.bak
+\.tmp
+\#.*\#
+\.#.*
+*~
+
+# IDE and editor directories
+\.vscode
+\.idea
+\.sublime-project
+\.sublime-workspace
+
+# Documentation and metadata (typically not needed in home directory)
+^/README.*
+^/LICENSE.*
+^/COPYING
+^/INSTALL.*
+^/TODO.*
+^/CHANGELOG.*
+^/\.editorconfig
+
+# Package manager files
+\.npmrc
+\.yarnrc
+package-lock\.json
+yarn\.lock
+
+# Python
+__pycache__
+\.pyc
+\.pyo
+\.pyd
+\.Python
+
+# Ruby
+\.bundle
+\.rbenv-version
+
+# Compiled files
+\.o
+\.so
+\.dylib
+\.class
+
+# Archives
+\.zip
+\.tar
+\.tar\.gz
+\.tgz
+\.rar
+
+# Logs
+\.log
