@@ -1,0 +1,62 @@
+{
+  "cli_default_open_behavior": "new_window",
+  "project_panel": {
+    "dock": "right",
+  },
+  "outline_panel": {
+    "dock": "right",
+  },
+  "collaboration_panel": {
+    "dock": "right",
+  },
+  "git_panel": {
+    "dock": "right",
+  },
+  "agent": {
+    "thinking_display": "always_collapsed",
+    "expand_terminal_card": false,
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-5-5",
+      "enable_thinking": true,
+      "effort": "high",
+    },
+    "dock": "left",
+    "enable_feedback": false,
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "default_config_options": {
+        "model": "sonnet"
+      },
+      "type": "registry",
+    },
+    "OpenCode": {
+      "command": "opencode",
+      "args": ["acp"],
+      "type": "custom",
+    },
+  },
+  "edit_predictions": {
+    "provider": "copilot",
+  },
+  "formatter": "language_server",
+  "format_on_save": "on",
+  "icon_theme": "Material Icon Theme",
+  "tabs": {
+    "file_icons": true,
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "terminal": {
+    "font_size": 14.0,
+    "font_family": "FiraCode Nerd Font",
+  },
+  "theme": {
+    "dark": "Tokyo Night",
+    "light": "Tokyo Night Light",
+    "mode": "system",
+  },
+}
