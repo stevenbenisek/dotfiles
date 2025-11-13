@@ -1,0 +1,79 @@
+[alias]
+    uncommit = reset --soft HEAD~1
+    unstage = reset HEAD
+
+[branch]
+    autoSetupMerge = always
+    autoSetupRebase = always
+    sort = -committerdate
+
+[color]
+    # Turn on colors to see diffs, status, branches, etc in color.
+    branch = auto
+    diff = auto
+    interactive = auto
+    pager = true
+    status = auto
+    ui = true
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[core]
+    editor = vim -c start
+
+[diff]
+    algorithm = histogram
+    tool = nvimdiffs
+
+[difftool]
+    prompt = false
+
+[init]
+    defaultBranch = main
+
+[merge]
+    conflictstyle = zdiff3
+    tool = nvimdiffs
+
+[mergetool]
+    prompt = false
+
+[pretty]
+    # tut: http://gitimmersion.com/lab_10.html
+    # ref: http://linux.die.net/man/1/git-log
+    # Result: <short-sha> <commit-message> (<pointer-names>) -- <commit-author-name>; <relative-time>
+    nice = "%C(yellow)%h%C(reset) %C(white)%s%C(cyan)%d%C(reset) -- %an; %ar"
+
+[pull]
+    rebase = true
+
+[push]
+    default = simple
+    autoSetupRemote = true
+
+[rebase]
+    updateRefs = true
+
+[rerere]
+    enabled = true
+
+[url "https://github"]
+    # http://stackoverflow.com/questions/4891527/git-protocol-blocked-by-company-how-can-i-get-around-that/10729634#10729634
+    insteadOf = git://github
+
+[include]
+    path = ~/.config/git/config.local
