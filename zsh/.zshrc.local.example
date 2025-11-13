@@ -1,0 +1,4 @@
+# This file can be used to set sensitive environment variables that are not tracked by version control
+# Copy this to .zshrc.local and set your actual values there
+export CONTEXT7_MCP_TOKEN=
+export GITHUB_MCP_TOKEN=

@@ -1,0 +1,26 @@
+[
+  {
+    "bindings": {
+      "cmd-alt-c": [
+        "agent::NewExternalAgentThread",
+        {
+          "agent": {
+            "custom": {
+              "name": "claude-acp",
+            },
+          },
+        },
+      ],
+      "cmd-alt-o": [
+        "agent::NewExternalAgentThread",
+        {
+          "agent": {
+            "custom": {
+              "name": "OpenCode",
+            },
+          },
+        },
+      ],
+    },
+  },
+]
