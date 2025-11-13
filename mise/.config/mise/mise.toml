@@ -1,0 +1,9 @@
+[tools]
+bun = "latest"
+deno = "latest"
+go = "latest"
+java = "latest"
+node = ["22", "24", "26", "latest"]
+python = "latest"
+ruby = ["3.2.0", "latest"]
+rust = "latest"

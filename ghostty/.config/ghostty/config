@@ -1,0 +1,6 @@
+font-family = FiraCodeNerdFont
+font-size = 14
+font-thicken = true
+keybind = shift+enter=text:\x1b\r
+shell-integration-features = ssh-terminfo,ssh-env
+theme = tokyonight

@@ -1,0 +1,11 @@
+# Tokyo Night theme
+--color=fg:#c0caf5,bg:#1a1b26,hl:#7aa2f7
+--color=fg+:#c0caf5,bg+:#283457,hl+:#7dcfff
+--color=info:#7aa2f7,prompt:#7dcfff,pointer:#bb9af7
+--color=marker:#9ece6a,spinner:#bb9af7,header:#7aa2f7
+--color=border:#565f89,label:#7aa2f7,query:#c0caf5
+
+# Layout and style
+--height=~100%
+--layout=reverse
+--style=minimal

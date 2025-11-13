@@ -1,0 +1,5 @@
+[theme]
+name = "tokyo-night"
+
+[ui]
+agent_panel_scope = "all"
