@@ -80,3 +80,47 @@ dotfiles/
 │   └── .zshrc
 └── ...
 ```
+
+## Local Configuration
+
+This repository follows a `.local` convention for machine-specific configuration that should not be version controlled. This pattern allows you to maintain shared configurations in the repository while keeping personal or machine-specific settings separate.
+
+### Pattern
+
+- `config` - Shared configuration (committed to repository)
+- `config.local` - Machine-specific overrides (excluded from version control)
+
+### Implementation
+
+#### 1. In Your Dotfiles
+
+Include a reference to the `.local` file in your main configuration:
+
+**Git Example** (`git/.config/git/config`):
+```ini
+[include]
+    path = ~/.config/git/config.local
+```
+
+#### 2. Create Local Config (Not in Repository)
+
+Create your machine-specific configuration file directly in your home directory (not in this repository):
+
+```bash
+# Git example
+vim ~/.config/git/config.local
+```
+
+**Example content** (`~/.config/git/config.local`):
+```ini
+[user]
+    name = Your Name
+    email = your.email@example.com
+```
+
+### Benefits
+
+- **Portability**: Share dotfiles across machines without exposing personal information
+- **Security**: Keep credentials, API keys, and personal data out of version control
+- **Flexibility**: Override any setting per-machine without modifying tracked files
+- **Convention**: Follows established patterns used across many tools and frameworks

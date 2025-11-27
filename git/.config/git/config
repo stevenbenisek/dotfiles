@@ -75,6 +75,5 @@
     # http://stackoverflow.com/questions/4891527/git-protocol-blocked-by-company-how-can-i-get-around-that/10729634#10729634
     insteadOf = git://github
 
-[user]
-    name = Steven Benisek
-    email = steven.benisek@gmail.com
+[include]
+    path = ~/.config/git/config.local
