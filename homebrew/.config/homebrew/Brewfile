@@ -39,6 +39,7 @@ cask "zed"                        # Fast and lightweight code editor with collab
 # AI Tools
 cask "claude"                     # AI-powered desktop application for writing and brainstorming
 cask "claude-code"                # AI-powered CLI assistant for software development
+brew "gemini-cli"                 # Command-line interface for Gemini AI model
 
 # Browsers
 cask "brave-browser"              # Privacy-focused web browser with built-in ad blocker
