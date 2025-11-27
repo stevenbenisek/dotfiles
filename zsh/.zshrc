@@ -26,6 +26,11 @@ if [ -f "$ZSHRC_DIR/completions.zsh" ]; then
   source "$ZSHRC_DIR/completions.zsh"
 fi
 
+# Source local config
+if [ -f "$HOME/.zshrc.local" ]; then
+  source "$HOME/.zshrc.local"
+fi
+
 # Init mise if available
 if command -v mise &> /dev/null; then
   eval "$(mise activate zsh)"
