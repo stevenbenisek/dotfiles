@@ -31,7 +31,6 @@ brew "lazydocker"                 # Simple terminal UI for Docker and Docker Com
 cask "ghostty"                    # Fast, native, feature-rich terminal emulator
 brew "neovim"                     # Hyperextensible Vim-based text editor with modern features
 brew "starship"                   # Minimal, blazing-fast, and customizable prompt for any shell
-brew "tmux"                       # Terminal multiplexer for managing multiple sessions
 
 # IDEs and Editors
 cask "visual-studio-code"         # Popular source-code editor with extensions and debugging
