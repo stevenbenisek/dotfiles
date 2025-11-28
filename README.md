@@ -124,3 +124,52 @@ vim ~/.config/git/config.local
 - **Security**: Keep credentials, API keys, and personal data out of version control
 - **Flexibility**: Override any setting per-machine without modifying tracked files
 - **Convention**: Follows established patterns used across many tools and frameworks
+
+## Homebrew Package Management
+
+### Single Brewfile Setup
+
+For a single Brewfile configuration, use stow normally:
+
+```bash
+stow homebrew
+```
+
+This will symlink `homebrew/.config/homebrew/Brewfile` to `~/.config/homebrew/Brewfile`.
+
+### Multiple Brewfile Setup (Context-Specific)
+
+For managing different package sets across contexts (e.g., personal computer, home server, gaming PC), use multiple Brewfiles without stow:
+
+#### Structure
+
+```
+homebrew/.config/homebrew/
+├── Brewfile.base          # Common packages for all systems
+├── Brewfile.personal      # Personal computer additions
+├── Brewfile.server        # Home server specific
+└── Brewfile.gaming        # Gaming computer additions
+```
+
+#### Installation
+
+Install packages by running `brew bundle install` with the `--file` flag for each context:
+
+```bash
+# Install base packages (required on all systems)
+brew bundle install --file=~/.config/homebrew/Brewfile.base
+
+# Then install context-specific packages
+brew bundle install --file=~/.config/homebrew/Brewfile.personal  # For personal computer
+# OR
+brew bundle install --file=~/.config/homebrew/Brewfile.server    # For home server
+# OR
+brew bundle install --file=~/.config/homebrew/Brewfile.gaming    # For gaming PC
+```
+
+#### Benefits
+
+- **Native brew bundle support**: Uses standard `--file` flag without workarounds
+- **Separation of concerns**: Base packages separate from context-specific ones
+- **Composability**: Install only what you need per machine
+- **Version control**: All Brewfiles tracked in git, no generated files
