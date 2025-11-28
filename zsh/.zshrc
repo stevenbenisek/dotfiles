@@ -1,30 +1,12 @@
 # Get the directory where this .zshrc file is located
 ZSHRC_DIR="${${(%):-%x}:A:h}/.zshrc.d"
 
-# Source exports first (other configs may depend on them)
-if [ -f "$ZSHRC_DIR/exports.zsh" ]; then
-  source "$ZSHRC_DIR/exports.zsh"
-fi
-
-# Source shell options
-if [ -f "$ZSHRC_DIR/options.zsh" ]; then
-  source "$ZSHRC_DIR/options.zsh"
-fi
-
-# Source functions
-if [ -f "$ZSHRC_DIR/functions.zsh" ]; then
-  source "$ZSHRC_DIR/functions.zsh"
-fi
-
-# Source aliases
-if [ -f "$ZSHRC_DIR/aliases.zsh" ]; then
-  source "$ZSHRC_DIR/aliases.zsh"
-fi
-
-# Source completions
-if [ -f "$ZSHRC_DIR/completions.zsh" ]; then
-  source "$ZSHRC_DIR/completions.zsh"
-fi
+# Source config files in order
+for config_file in exports paths options functions aliases completions; do
+  if [ -f "$ZSHRC_DIR/${config_file}.zsh" ]; then
+    source "$ZSHRC_DIR/${config_file}.zsh"
+  fi
+done
 
 # Source local config
 if [ -f "$HOME/.zshrc.local" ]; then

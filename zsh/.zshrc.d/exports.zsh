@@ -25,9 +25,3 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
 export HISTFILE=$HOME/.zsh_history
 export HISTSIZE=32768  # 32³ commands in memory
 export SAVEHIST=32768  # 32³ commands saved to disk
-
-# Remove duplicates from paths
-# Note: Use lowercase (fpath/path) because they're arrays tied to uppercase env vars (FPATH/PATH)
-# typeset -U works on arrays, and changes automatically sync to the uppercase versions
-typeset -U fpath
-typeset -U path
