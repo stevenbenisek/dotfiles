@@ -55,10 +55,5 @@ cask "safari-technology-preview"  # Experimental version of Safari for testing n
 # Fonts
 cask "font-fira-code-nerd-font"   # Monospaced font with programming ligatures and icons
 
-# Miscellaneous
-cask "bruno"                      # Open-source IDE for exploring and testing APIs
-brew "awscli"                     # Official Amazon Web Services command-line interface
-brew "vegeta"                     # HTTP load testing tool and library
-
 # Everything else
 cask "raycast"                    # Productivity tool for macOS with quick access to apps and workflows
