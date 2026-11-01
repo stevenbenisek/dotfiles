@@ -49,7 +49,6 @@ brew "mistral-vibe"                # Minimal CLI coding agent
 brew "pi-coding-agent"             # AI agent toolkit
 
 # Browsers
-cask "brave-browser"               # Privacy-focused web browser with built-in ad blocker
 cask "firefox"                     # Popular open-source web browser focused on privacy and customization
 cask "google-chrome"               # Fast, secure, and widely-used web browser
 cask "microsoft-edge"              # Fast and secure web browser from Microsoft
