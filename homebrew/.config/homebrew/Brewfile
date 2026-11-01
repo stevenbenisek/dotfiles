@@ -32,7 +32,6 @@ brew "lazydocker"                  # Simple terminal UI for Docker and Docker Co
 
 # Terminal Tools
 cask "ghostty"                     # Fast, native, feature-rich terminal emulator
-brew "herdr"                       # Terminal multiplexer and session manager for macOS
 brew "modem-dev/tap/hunk"          # Review-first diff viewer that plays nice with agents
 brew "neovim"                      # Hyperextensible Vim-based text editor with modern features
 brew "starship"                    # Minimal, blazing-fast, and customizable prompt for any shell

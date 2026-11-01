@@ -137,10 +137,6 @@ stow -D git
 
 ## Post-Install
 
-### Install skills
-
-- [Install herdr agent skills](https://herdr.dev/docs/agent-skill/)
-
 ### Initialize Launch Agents
 
 After stowing the `launchd` package, you need to load the launch agents to make them active:
