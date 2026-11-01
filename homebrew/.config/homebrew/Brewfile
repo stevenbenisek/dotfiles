@@ -23,7 +23,6 @@ brew "mise"                        # Polyglot runtime manager for managing dev t
 brew "git"                         # Distributed version control system
 brew "git-lfs"                     # Git extension for versioning large files
 brew "lazygit"                     # Simple terminal UI for git commands with interactive interface
-brew "agavra/tap/tuicr"            # TUI for code review with vim keybindings
 
 # Container Tools
 cask "orbstack"                    # Fast, lightweight Docker and Linux container runtime for macOS
