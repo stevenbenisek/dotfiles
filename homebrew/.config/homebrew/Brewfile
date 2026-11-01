@@ -51,7 +51,6 @@ brew "pi-coding-agent"             # AI agent toolkit
 # Browsers
 cask "firefox"                     # Popular open-source web browser focused on privacy and customization
 cask "google-chrome"               # Fast, secure, and widely-used web browser
-cask "microsoft-edge"              # Fast and secure web browser from Microsoft
 
 # Password Managers
 brew "gnupg"                       # GNU Privacy Guard for encryption and signing
