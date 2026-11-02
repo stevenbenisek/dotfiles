@@ -40,7 +40,6 @@ cask "visual-studio-code"          # Popular source-code editor with extensions 
 cask "zed"                         # Fast and lightweight code editor with collaborative features
 
 # AI Tools
-cask "chatgpt"                     # AI-powered chatbot for generating text and answering questions
 cask "claude"                      # AI-powered desktop application for writing and brainstorming
 cask "claude-code"                 # AI-powered CLI assistant for software development
 cask "fabric-ai"                   # Open-source framework for augmenting humans using AI
