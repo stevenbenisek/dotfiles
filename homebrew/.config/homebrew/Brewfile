@@ -13,9 +13,6 @@ brew "ripgrep"                     # Recursively searches directories for regex 
 brew "stow"                        # Symlink farm manager for managing dotfiles
 brew "zoxide"                      # Smarter cd command that learns your habits
 
-# Package Managers
-brew "luarocks"                    # Package manager for Lua modules
-
 # Runtime Managers
 brew "mise"                        # Polyglot runtime manager for managing dev tool versions
 
