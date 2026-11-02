@@ -57,7 +57,7 @@ brew "pinentry-mac" if OS.mac?     # Pinentry program for GPG passphrase entry o
 cask "font-fira-code-nerd-font"    # Monospaced font with programming ligatures and icons
 
 # Everything else
-cask "raycast"                     # Productivity tool for macOS with quick access to apps and workflows
+cask "raycast"  if OS.mac?         # Productivity tool for macOS with quick access to apps and workflows
 cask "tailscale"                   # Zero-config VPN for secure remote access to devices
 brew "mole" if OS.mac?             # Clean up and manage your macOS system
 brew "yt-dlp"                      # Command-line program to download videos from YouTube and other sites
