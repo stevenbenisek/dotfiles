@@ -135,37 +135,6 @@ stow -D git
 
 **Important:** Back up any existing configuration files before stowing, as conflicts will prevent Stow from creating symlinks.
 
-## Post-Install
-
-### Initialize Launch Agents
-
-After stowing the `launchd` package, you need to load the launch agents to make them active:
-
-```bash
-# Stow the launchd package first
-stow launchd
-
-# Load all launch agents
-launchctl load ~/Library/LaunchAgents/*.plist
-
-# Or load a specific agent
-launchctl load ~/Library/LaunchAgents/dev.orbstack.app.plist
-```
-
-To verify that agents are loaded:
-
-```bash
-launchctl list | grep dev.orbstack
-```
-
-To unload an agent:
-
-```bash
-launchctl unload ~/Library/LaunchAgents/dev.orbstack.app.plist
-```
-
-**Note:** Launch agents will automatically start on the next login after being stowed. Manual loading is only needed for immediate activation.
-
 ## Tips
 
 - Use `stow -n` to preview changes before applying them
