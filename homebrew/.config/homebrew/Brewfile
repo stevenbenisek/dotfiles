@@ -23,7 +23,6 @@ cask "orbstack" if OS.mac?         # Fast, lightweight Docker and Linux containe
 cask "claude-code"                 # AI-powered CLI assistant for software development
 brew "mistral-vibe"                # Minimal CLI coding agent
 brew "pi-coding-agent"             # AI agent toolkit
-cask "wispr-flow"                  # Voice-to-text dictation with AI-powered auto-editing
 
 # Monitoring
 brew "btop"                        # Interactive process viewer for the terminal
