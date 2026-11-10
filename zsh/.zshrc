@@ -30,11 +30,6 @@ if command -v zoxide &> /dev/null; then
   eval "$(zoxide init zsh)"
 fi
 
-# Init Worktrunk if available
-if command -v wt &> /dev/null; then
-  eval "$(command wt config shell init zsh)";
-fi
-
 # Init Starship if available (should be last)
 if command -v starship &> /dev/null; then
   eval "$(starship init zsh)"
