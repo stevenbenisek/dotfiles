@@ -18,11 +18,9 @@ brew "ripgrep"                     # Recursively searches directories for regex 
 
 # Git
 brew "modem-dev/tap/hunk"          # Review-first diff viewer that plays nice with agents
-brew "lazygit"                     # Simple terminal UI for git commands with interactive interface
 
 # Containers & Kubernetes
 brew "kubectl"                     # Command-line tool for controlling Kubernetes clusters
-brew "lazydocker"                  # Simple terminal UI for Docker and Docker Compose
 cask "orbstack" if OS.mac?         # Fast, lightweight Docker and Linux container runtime for macOS
 
 # Editors
