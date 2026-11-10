@@ -34,7 +34,6 @@
 
 [core]
     editor = vim -c start
-    pager = hunk pager
 
 [diff]
     algorithm = histogram
