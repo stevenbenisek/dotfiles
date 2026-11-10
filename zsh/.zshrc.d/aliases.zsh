@@ -38,12 +38,6 @@ alias path='echo $PATH | tr ":" "\n"'                    # Show PATH directories
 alias 'h?'='history_fzf'                                 # Search command history with fzf
 alias reload='source ~/.zshrc'                           # Reload .zshrc configuration
 
-# Fabric
-alias fabric='fabric-ai'                                 # Use fabric-ai for fabric command
-alias f='fabric-ai'                                      # Use ai for fabric command
-alias fw='fabric-ai -c -p improve_writing'               # Use fabric-ai to improve writing
-alias fq='fabric-ai --search -p raw_query'               # Use fabric-ai to run raw query
-
 # Git
 alias g='git'                                            # Git shorthand
 alias ga='git add'                                       # Add files to staging

@@ -34,7 +34,6 @@ cask "zed"                         # Fast and lightweight code editor with colla
 
 # AI
 cask "claude-code"                 # AI-powered CLI assistant for software development
-brew "fabric-ai"                   # Open-source framework for augmenting humans using AI
 brew "mistral-vibe"                # Minimal CLI coding agent
 brew "pi-coding-agent"             # AI agent toolkit
 cask "wispr-flow"                  # Voice-to-text dictation with AI-powered auto-editing
