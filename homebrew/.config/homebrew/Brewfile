@@ -17,6 +17,7 @@ brew "jq"                          # Lightweight command-line JSON processor
 brew "ripgrep"                     # Recursively searches directories for regex patterns (faster grep)
 
 # Infra
+brew "container" if OS.mac?        # Apple's tool for creating and running Linux containers as lightweight VMs
 brew "kubectl"                     # Command-line tool for controlling Kubernetes clusters
 cask "orbstack" if OS.mac?         # Fast, lightweight Docker and Linux container runtime for macOS
 
