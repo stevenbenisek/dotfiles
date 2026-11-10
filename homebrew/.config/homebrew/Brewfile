@@ -27,7 +27,6 @@ cask "orbstack" if OS.mac?         # Fast, lightweight Docker and Linux containe
 
 # Editors
 brew "neovim"                      # Hyperextensible Vim-based text editor with modern features
-cask "visual-studio-code"          # Popular source-code editor with extensions and debugging
 cask "zed"                         # Fast and lightweight code editor with collaborative features
 
 # AI
