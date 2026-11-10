@@ -103,7 +103,3 @@ alias klf='kubectl logs -f'                              # Stream the logs for a
 alias klf1h='kubectl logs --since 1h -f'                 # Stream logs from the last hour for a container or resource (follow)
 alias klf1m='kubectl logs --since 1m -f'                 # Stream logs from the last minute for a container or resource (follow)
 alias klf1s='kubectl logs --since 1s -f'                 # Stream logs from the last second for a container or resource (follow)
-
-# Neovim
-alias vi='nvim'                                          # Use Neovim for vi
-alias vim='nvim'                                         # Use Neovim for vim

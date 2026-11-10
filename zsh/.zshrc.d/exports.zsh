@@ -9,8 +9,8 @@ export BAT_CONFIG_DIR="$XDG_CONFIG_HOME/bat"
 export BAT_CONFIG_PATH="$BAT_CONFIG_DIR/bat.conf"
 
 # Editor configuration
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=vim
+export VISUAL=vim
 
 # FZF configuration
 export FZF_DEFAULT_OPTS_FILE="$XDG_CONFIG_HOME/fzf/config"

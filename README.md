@@ -21,10 +21,6 @@ dotfiles/
 │   └── .config/
 │       └── git/
 │           └── config
-├── nvim/
-│   └── .config/
-│       └── nvim/
-│           └── init.lua
 ├── zsh/
 │   └── .zshrc
 └── ...

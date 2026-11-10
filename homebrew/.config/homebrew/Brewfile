@@ -19,10 +19,6 @@ brew "ripgrep"                     # Recursively searches directories for regex 
 brew "kubectl"                     # Command-line tool for controlling Kubernetes clusters
 cask "orbstack" if OS.mac?         # Fast, lightweight Docker and Linux container runtime for macOS
 
-# Editors
-brew "neovim"                      # Hyperextensible Vim-based text editor with modern features
-cask "zed"                         # Fast and lightweight code editor with collaborative features
-
 # AI
 cask "claude-code"                 # AI-powered CLI assistant for software development
 brew "mistral-vibe"                # Minimal CLI coding agent
@@ -39,6 +35,7 @@ cask "ghostty"                     # Fast, native, feature-rich terminal emulato
 cask "google-chrome"               # Fast, secure, and widely-used web browser
 cask "raycast" if OS.mac?          # Productivity tool for macOS with quick access to apps and workflows
 cask "tailscale"                   # Zero-config VPN for secure remote access to devices
+cask "zed"                         # Fast and lightweight code editor with collaborative features
 
 # Fonts
 cask "font-fira-code-nerd-font"    # Monospaced font with programming ligatures and icons
