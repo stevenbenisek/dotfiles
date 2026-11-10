@@ -45,9 +45,6 @@ brew "pass"                        # Command-line password manager with GPG encr
 brew "pass-otp"                    # Extension for pass to generate one-time passwords (OTPs)
 brew "pinentry-mac" if OS.mac?     # Pinentry program for GPG passphrase entry on macOS
 
-# Media
-brew "yt-dlp"                      # Command-line program to download videos from YouTube and other sites
-
 # Monitoring
 brew "btop"                        # Interactive process viewer for the terminal
 brew "mole" if OS.mac?             # Clean up and manage your macOS system
