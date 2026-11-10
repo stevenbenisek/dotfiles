@@ -36,6 +36,3 @@ if [ -d "$HOME/.kube/config.d" ]; then
       fi
   done
 fi
-
-## TTY
-export GPG_TTY=$(tty)

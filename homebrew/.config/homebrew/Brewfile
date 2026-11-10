@@ -37,12 +37,6 @@ brew "mistral-vibe"                # Minimal CLI coding agent
 brew "pi-coding-agent"             # AI agent toolkit
 cask "wispr-flow"                  # Voice-to-text dictation with AI-powered auto-editing
 
-# Security
-brew "gnupg"                       # GNU Privacy Guard for encryption and signing
-brew "pass"                        # Command-line password manager with GPG encryption
-brew "pass-otp"                    # Extension for pass to generate one-time passwords (OTPs)
-brew "pinentry-mac" if OS.mac?     # Pinentry program for GPG passphrase entry on macOS
-
 # Monitoring
 brew "btop"                        # Interactive process viewer for the terminal
 brew "mole" if OS.mac?             # Clean up and manage your macOS system
