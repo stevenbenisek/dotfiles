@@ -15,8 +15,6 @@ brew "fd"                          # Simple, fast alternative to 'find' with int
 brew "jq"                          # Lightweight command-line JSON processor
 brew "ripgrep"                     # Recursively searches directories for regex patterns (faster grep)
 
-# Git
-
 # Containers & Kubernetes
 brew "kubectl"                     # Command-line tool for controlling Kubernetes clusters
 cask "orbstack" if OS.mac?         # Fast, lightweight Docker and Linux container runtime for macOS
