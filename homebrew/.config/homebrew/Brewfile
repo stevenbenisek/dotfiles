@@ -7,7 +7,6 @@ brew "stow"                        # Symlink farm manager for managing dotfiles
 brew "fzf"                         # Command-line fuzzy finder for interactive searching
 brew "starship"                    # Minimal, blazing-fast, and customizable prompt for any shell
 brew "zoxide"                      # Smarter cd command that learns your habits
-brew "zsh-completions"             # Zsh completions for various commands
 
 # File & Text
 brew "bat"                         # Cat clone with syntax highlighting and Git integration
