@@ -7,6 +7,7 @@ brew "stow"                        # Symlink farm manager for managing dotfiles
 brew "fzf"                         # Command-line fuzzy finder for interactive searching
 brew "starship"                    # Minimal, blazing-fast, and customizable prompt for any shell
 brew "zoxide"                      # Smarter cd command that learns your habits
+cask "font-fira-code-nerd-font"    # Monospaced font with programming ligatures and icons
 
 # File & Text
 brew "bat"                         # Cat clone with syntax highlighting and Git integration
@@ -15,7 +16,7 @@ brew "fd"                          # Simple, fast alternative to 'find' with int
 brew "jq"                          # Lightweight command-line JSON processor
 brew "ripgrep"                     # Recursively searches directories for regex patterns (faster grep)
 
-# Containers & Kubernetes
+# Infra
 brew "kubectl"                     # Command-line tool for controlling Kubernetes clusters
 cask "orbstack" if OS.mac?         # Fast, lightweight Docker and Linux container runtime for macOS
 
@@ -35,6 +36,3 @@ cask "google-chrome"               # Fast, secure, and widely-used web browser
 cask "raycast" if OS.mac?          # Productivity tool for macOS with quick access to apps and workflows
 cask "tailscale"                   # Zero-config VPN for secure remote access to devices
 cask "zed"                         # Fast and lightweight code editor with collaborative features
-
-# Fonts
-cask "font-fira-code-nerd-font"    # Monospaced font with programming ligatures and icons
