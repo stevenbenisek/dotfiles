@@ -21,7 +21,6 @@ brew "modem-dev/tap/hunk"          # Review-first diff viewer that plays nice wi
 brew "lazygit"                     # Simple terminal UI for git commands with interactive interface
 
 # Containers & Kubernetes
-brew "container" if OS.mac?        # Apple Silicon-native container runtime for macOS
 brew "kubectl"                     # Command-line tool for controlling Kubernetes clusters
 brew "lazydocker"                  # Simple terminal UI for Docker and Docker Compose
 cask "orbstack" if OS.mac?         # Fast, lightweight Docker and Linux container runtime for macOS
